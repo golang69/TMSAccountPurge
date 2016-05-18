@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d6592ad36efa4928b6c6388e1ec0e6c8" Name="Diagram1">
+        <EntityTypeShape EntityType="FenergoModel.LEBranchSDSCounterparty" Width="1.5" PointX="3" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="FenergoModel.LegalEntityExtension" Width="1.5" PointX="3" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="FenergoModel.LESDSCounterparty" Width="1.5" PointX="3" PointY="24.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FenergoModel.LESubAccountSDSCounterparty" Width="1.5" PointX="3" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FenergoModel.LETMSAccount" Width="1.5" PointX="3" PointY="37" IsExpanded="true" />
+        <EntityTypeShape EntityType="FenergoModel.LegalEntity" Width="1.5" PointX="0.75" PointY="21.125" IsExpanded="true" />
+        <AssociationConnector Association="FenergoModel.FK_LEBranchSDSCounterparty_LegalEntity" ManuallyRouted="false" />
+        <AssociationConnector Association="FenergoModel.FK_LegalEntityExtension_LegalEntity" ManuallyRouted="false" />
+        <AssociationConnector Association="FenergoModel.FK_LESDSCounterparty_LegalEntity" ManuallyRouted="false" />
+        <AssociationConnector Association="FenergoModel.FK_LESubAccountSDSCounterparty_LegalEntity" ManuallyRouted="false" />
+        <AssociationConnector Association="FenergoModel.FK_LETMSAccount_LegalEntity" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

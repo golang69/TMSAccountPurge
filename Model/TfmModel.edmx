@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="TFMModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="IncomingMessage">
+          <Key>
+            <PropertyRef Name="IncomingMessageId" />
+          </Key>
+          <Property Name="IncomingMessageId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="MessageStatusId" Type="tinyint" Nullable="false" />
+          <Property Name="MessageQueueId" Type="smallint" Nullable="false" />
+          <Property Name="Format" Type="nvarchar" MaxLength="100" />
+          <Property Name="XmlMessage" Type="text" />
+          <Property Name="ErrorMessage" Type="varchar(max)" />
+          <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+          <Property Name="ProcessedOn" Type="datetime" />
+          <Property Name="MessageProcessingDurationInSec" Type="int" />
+        </EntityType>
+        <EntityContainer Name="TFMModelStoreContainer">
+          <EntitySet Name="IncomingMessage" EntityType="Self.IncomingMessage" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TFMModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="IncomingMessage">
+          <Key>
+            <PropertyRef Name="IncomingMessageId" />
+          </Key>
+          <Property Name="IncomingMessageId" Type="Guid" Nullable="false" />
+          <Property Name="MessageStatusId" Type="Byte" Nullable="false" />
+          <Property Name="MessageQueueId" Type="Int16" Nullable="false" />
+          <Property Name="Format" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="XmlMessage" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ErrorMessage" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ProcessedOn" Type="DateTime" Precision="3" />
+          <Property Name="MessageProcessingDurationInSec" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="TFMEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="IncomingMessages" EntityType="Self.IncomingMessage" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TFMModelStoreContainer" CdmEntityContainer="TFMEntities">
+          <EntitySetMapping Name="IncomingMessages">
+            <EntityTypeMapping TypeName="TFMModel.IncomingMessage">
+              <MappingFragment StoreEntitySet="IncomingMessage">
+                <ScalarProperty Name="IncomingMessageId" ColumnName="IncomingMessageId" />
+                <ScalarProperty Name="MessageStatusId" ColumnName="MessageStatusId" />
+                <ScalarProperty Name="MessageQueueId" ColumnName="MessageQueueId" />
+                <ScalarProperty Name="Format" ColumnName="Format" />
+                <ScalarProperty Name="XmlMessage" ColumnName="XmlMessage" />
+                <ScalarProperty Name="ErrorMessage" ColumnName="ErrorMessage" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="ProcessedOn" ColumnName="ProcessedOn" />
+                <ScalarProperty Name="MessageProcessingDurationInSec" ColumnName="MessageProcessingDurationInSec" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

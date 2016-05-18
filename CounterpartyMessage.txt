@@ -1,0 +1,24 @@
+﻿<!DOCTYPE Barclays.Capital.Message SYSTEM "BC.MSD.Counterparty.dtd">
+<Barclays.Capital.Message>
+      <BCHead HdrV="3.3" Source="out.MSD.live.ldn.bc.com" Format="BC.MSD.Counterparty" Time="20150528071341" Type="BC" MessId="MSD" UIdentifier="ldnccr36239n01-14212-28 May 2015 07:26:56.646-569339">
+            <Dest type = "valueset">
+                  <_Dest>pub.MSD.live.ldn.bc.com</_Dest>
+            </Dest>
+      </BCHead>
+      <BCEvent EvType="Counterparty" SubType="Reverse-Replace" App="MSD" Loc="ldn" Ev1="S" Ev2="" Ev3=""/>
+      <MSDHead Version="1.0" WorkItemRef="27466654" TransactionNo="50278744" Status="Verified" BusinessArea="Global Technology - Europe" Contact="INTRANET&apos;SYSSDSGFM" Comment="Change processed by SDSDataFeed.Net" Reason="Change of Details" UMI="LON010027697224"/>
+      <Counterparty MSD.Action="Unchanged" MSD.Subtype="SubAccount" LastSentTime="2015-05-28 07:13:38:411" UltimateParent="10400432" Id="40378446" ShortName="Santander-PR G&amp;I Fd" Parent="40279963" Name="First Puerto Rico Growth &amp; Income Fund" CpartyStatus="" CompleteFlag="Y" PremierClient="N" Type="S" UpdatedBy="INTRANET&apos;SDSMAPPING" LastUpdateDate="2015-05-28 07:13:38:411" CreatedDate="2006-11-14 14:07:47:030"/>
+      <mapsTo MSD.Action="Unchanged" MapId="40378446" CounterpartyId="40378446" System="BLOOMNY"/>
+      <mapsTo MSD.Action="Unchanged" MapId="40378446" CounterpartyId="40378446" System="EXPERT"/>
+      <mapsTo MSD.Action="Unchanged" MapId="66-0549202" CounterpartyId="40378446" System="TAXID"/>
+      <mapsTo MSD.Action="Unchanged" MapId="SANT FPRGIF" CounterpartyId="40378446" System="NICKNAME"/>
+      <mapsTo MSD.Action="Unchanged" MapId="40040378446" CounterpartyId="40378446" System="IMPACT"/>
+      <mapsTo MSD.Action="Unchanged" MapId="40378446" CounterpartyId="40378446" System="FIFES"/>
+      <mapsTo MSD.Action="Unchanged" MapId="SANT FPRGIF" CounterpartyId="40378446" System="AURORA"/>
+      <mapsTo MSD.Action="Cancel" MapId="96100113" CounterpartyId="40378446" System="LEHTMS"/>
+      <mapsTo MSD.Action="Unchanged" MapId="40282768" CounterpartyId="40378446" System="SDS"/>
+      <defines MSD.Action="Unchanged" CounterpartyId="40378446" ClientCategoryCode="60"/>
+      <defines MSD.Action="Unchanged" CounterpartyId="40378446" ClientCategoryCode="AA"/>
+      <defines MSD.Action="Unchanged" CounterpartyId="40378446" ClientCategoryCode="CN"/>
+      <tradingRelationship MSD.Action="Unchanged" CounterpartyId="40378446" RltdCpartyId="40279963" RelType="AGENT" ParentInd="Y"/>
+</Barclays.Capital.Message>

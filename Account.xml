@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE Barclays.Capital.Message SYSTEM "C:\Program Files (x86)\Barclays Capital\BCToolsTI\dtd\composite.dtd">
+<Barclays.Capital.Message>
+
+  <BCHead Format="BC.MSD.Account" HdrV="4.0" MessId="MSD" Source="out.MSD.live.ldn.bc.com" Time="20150521113215" Type="BC" UIdentifier="ldnccr36239n01-13756-21 May 2015 11:32:11.225-2109">
+    <Dest type="valueset">
+      <_Dest>pub.MSD.live.ldn.bc.com</_Dest>
+    </Dest>
+  </BCHead>
+
+  <BCEvent App="MSD" Ev1="Customer" Ev2="" Ev3="" EvType="Account" Loc="ldn" SubType="Reverse-Replace"/>
+
+  <MSDHead BusinessArea="" Comment="CPI Real Time Feed" Contact="CPI Operator systfmw" Reason="" Status="Verified" TransactionNo="48758377" UMI="LON010025651955" Version="1.0" WorkItemRef="0"/>
+
+  <Account AccountId="4638648" AcctLstUpdateOprId="CPI Operator systfmw" AcctLstUpdateTS="2015-05-21 11:32:02:423" AcctStatus="O" AcctStatusChangeTs="2012-07-27 16:00:24:920" AcctTaxNmLnId="1" AcctType="C" AppAccessCode="TOPACCT" BranchId="00210" CloseDate="9999-12-31" CustomerCategoryCode="PAR" DvpRvpInd="N" InstCount="0" InternalId="50033375" LegalCountryCode="US" LegalEntityId="10406438" LongName="ALLIANZGI STRUCTURED ALPHA 1000 PLUS LLC" MSD.Action="Reverse-Replace" MSD.Subtype="Customer" MasterNumber="M011406" NumberOfProfiles="0" OpenDate="2012-07-27" OwnerQuantity="1" ResidenceCountryCode="US" ResidenceStateCode="NY" SdsId="41191214" ShortName="ALLIANZGI STRUCTURED ALPHA" TefraReportCode="" TrickingIndicator="N">
+    <Address CityName="NEW YORK" CountryCode="US" SeqNo="1" StateCode="NY" ZipCode="100196708">
+      <AddressRole Type="MAILCONF"/>
+      <AddressRole Type="MAILSTMT"/>
+      <AddressRole Type="MAINADDR"/>
+      <AddressLine LineSeqNo="1" Text="ALLIANZGI STRUCTURED ALPHA" Type="NAME"/>
+      <AddressLine LineSeqNo="2" Text="1000 PLUS LLC" Type="NAME"/>
+      <AddressLine LineSeqNo="3" Text="1633 BROADWAY" Type="ADDRESS"/>
+      <AddressLine LineSeqNo="4" Text="NEW YORK NY 10019-6708" Type="ADDRESS"/>
+      <AddressLine LineSeqNo="5"/>
+      <AddressLine LineSeqNo="6"/>
+      <AddressLine LineSeqNo="7"/>
+      <AddressLine LineSeqNo="8"/>
+    </Address>
+    <Address SeqNo="501">
+      <AddressRole Type="OLDADDR"/>
+      <AddressLine LineSeqNo="1" Text="STRUCTURED ALPHA-" Type="NAME"/>
+      <AddressLine LineSeqNo="2" Text="AY10 PLUS LLC" Type="NAME"/>
+      <AddressLine LineSeqNo="3" Text="KOENIGINSTRASSE 28" Type="ADDRESS"/>
+      <AddressLine LineSeqNo="4" Text="MUNICH" Type="ADDRESS"/>
+      <AddressLine LineSeqNo="5" Text="80802" Type="ADDRESS"/>
+      <AddressLine LineSeqNo="6" Text="GERMANY" Type="ADDRESS"/>
+      <AddressLine LineSeqNo="7"/>
+      <AddressLine LineSeqNo="8"/>
+    </Address>
+    <Address CityName="NEW YORK" CountryCode="US" SeqNo="503" StateCode="NY" ZipCode="100196708">
+      <AddressRole Type="OLDADDR"/>
+      <AddressLine LineSeqNo="1" Text="STRUCTURED ALPHA-" Type="NAME"/>
+      <AddressLine LineSeqNo="2" Text="AY10 PLUS LLC" Type="NAME"/>
+      <AddressLine LineSeqNo="3" Text="1633 BROADWAY" Type="ADDRESS"/>
+      <AddressLine LineSeqNo="4" Text="NEW YORK NY 10019-6708" Type="ADDRESS"/>
+      <AddressLine LineSeqNo="5"/>
+      <AddressLine LineSeqNo="6"/>
+      <AddressLine LineSeqNo="7"/>
+      <AddressLine LineSeqNo="8"/>
+    </Address>
+    <AccountXRef EndDate="9999-12-31" SourceId="21030183" SourceSystemCode="TMS" StartDate="2012-07-27"/>
+    <AlternateXRef AlternateId="____________________" AlternateType="NICKN"/>
+    <AlternateXRef AlternateId="99999" AlternateType="DTCINSTID"/>
+    <TaxInfo TaxFormat="EIN" TaxId="455425193" TaxType="PRIMARY"/>
+    <CustomerAccount CorpCashInd="N" MarginInd="Y" PayOutCode="INST" PrimeBrokerInd="N" SalespersonId="210333" StatementFrequencyCode="Q" TefraWithholdCode="NONEXMPT">
+      <DiscretionInfo AcctReferralCode="" AcctReferralType="N" ChgMngrDscr="N" IrDscr="N" IsManaged="N" ManagerAdvisorInd=" " RegCustody="C"/>
+    </CustomerAccount>
+  </Account>
+
+</Barclays.Capital.Message>
+
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE Barclays.Capital.Message SYSTEM "C:\Program Files (x86)\Barclays Capital\BCToolsTI\dtd\composite.dtd">
+<Barclays.Capital.Message>
+
+  <BCHead Format="BC.MSD.Account" HdrV="4.0" MessId="MSD" Source="out.MSD.live.ldn.bc.com" Time="20150520175642" Type="BC" UIdentifier="ldnccr36239n01-15290-19 May 2015 10:33:31.500-62931">
+    <Dest type="valueset">
+      <_Dest>pub.MSD.live.ldn.bc.com</_Dest>
+    </Dest>
+  </BCHead>
+
+  <BCEvent App="MSD" Ev1="Street" Ev2="" Ev3="" EvType="Account" Loc="ldn" SubType="Reverse-Replace"/>
+
+  <MSDHead BusinessArea="" Comment="CPI File Feed" Contact="CPI Operator CPISYS" Reason="" Status="Verified" TransactionNo="48714881" UMI="LON010025608555" Version="1.0" WorkItemRef="0"/>
+
+  <Account AccountId="1988598" AcctLstUpdateOprId="CPI Operator CPISYS" AcctLstUpdateTS="2015-05-19 10:33:26:383" AcctStatus="P" AcctStatusChangeTs="2015-05-19 10:33:26:130" AcctTaxNmLnId="0" AcctType="S" BranchId="00010" CloseDate="2015-05-13" CustomerCategoryCode="HOU" DvpRvpInd="N" InstCount="0" InternalId="1988598" LegalCountryCode="US" LegalEntityId="10406438" LongName="CASH DIVIDENDS DEC 2015 BARCLAYS CAPITAL INC" MSD.Action="Reverse-Replace" MSD.Subtype="Street" NumberOfProfiles="0" OpenDate="2004-12-29" OwnerQuantity="0" ResidenceCountryCode="US" ResidenceStateCode="NJ" SdsId="0" SetupOperatorId="3540022" ShortName="CASH DIVIDENDS DEC 2015" TefraReportCode="" TrickingIndicator="N">
+    <Address CityName="NEW JERSEY" CountryCode="US" SeqNo="1" StateCode="NJ" ZipCode="073024585">
+      <AddressRole Type="MAILCONF"/>
+      <AddressRole Type="MAILSTMT"/>
+      <AddressRole Type="MAINADDR"/>
+      <AddressLine LineSeqNo="1" Text="CASH DIVIDENDS DEC 2015" Type="NAME"/>
+      <AddressLine LineSeqNo="2" Text="BARCLAYS CAPITAL INC" Type="NAME"/>
+      <AddressLine LineSeqNo="3" Text="70 HUDSON STREET" Type="ADDRESS"/>
+      <AddressLine LineSeqNo="4" Text="NEW JERSEY NJ 07302-4585" Type="ADDRESS"/>
+      <AddressLine LineSeqNo="5"/>
+      <AddressLine LineSeqNo="6"/>
+      <AddressLine LineSeqNo="7"/>
+      <AddressLine LineSeqNo="8"/>
+    </Address>
+    <Address CityName="NEW JERSEY" CountryCode="US" SeqNo="501" StateCode="NJ" ZipCode="073024585">
+      <AddressRole Type="OLDADDR"/>
+      <AddressLine LineSeqNo="1" Text="CASH DIVIDENDS DECEMBER 2005" Type="NAME"/>
+      <AddressLine LineSeqNo="2" Text="BARCLAYS CAPITAL INC" Type="ATTN"/>
+      <AddressLine LineSeqNo="3" Text="ATTN: DIVIDENDS DEPT.- P.BORZI" Type="ATTN"/>
+      <AddressLine LineSeqNo="4" Text="70 HUDSON STREET - 7TH FL." Type="ADDRESS"/>
+      <AddressLine LineSeqNo="5" Text="NEW JERSEY NJ 07302-4585" Type="ADDRESS"/>
+      <AddressLine LineSeqNo="6"/>
+      <AddressLine LineSeqNo="7"/>
+      <AddressLine LineSeqNo="8"/>
+    </Address>
+    <AccountXRef EndDate="9999-12-31" SourceId="01010512" SourceSystemCode="TMS" StartDate="2004-12-29"/>
+    <TaxInfo TaxFormat="EIN" TaxId="061031656" TaxType="PRIMARY"/>
+  </Account>
+
+</Barclays.Capital.Message>

@@ -1,0 +1,963 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="FenergoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="LEBranchSDSCounterparty">
+          <Key>
+            <PropertyRef Name="LegalEntityId" />
+          </Key>
+          <Property Name="LegalEntityId" Type="int" Nullable="false" />
+          <Property Name="SdsId" Type="bigint" />
+          <Property Name="CounterpartyType" Type="char" MaxLength="2" />
+          <Property Name="CounterpartyName" Type="nvarchar" MaxLength="255" />
+          <Property Name="CounterpartyShortName" Type="nvarchar" MaxLength="20" />
+          <Property Name="ParentCounterpartyId" Type="bigint" />
+          <Property Name="CountryOfOperation" Type="char" MaxLength="2" />
+          <Property Name="NoOfParties" Type="int" />
+          <Property Name="TEFRA" Type="nvarchar" MaxLength="5" />
+          <Property Name="Cnotice" Type="char" MaxLength="1" />
+          <Property Name="DocumentStatus" Type="nvarchar" MaxLength="50" />
+          <Property Name="PayeeType" Type="nvarchar" MaxLength="10" />
+          <Property Name="PayeeStatus" Type="nvarchar" MaxLength="10" />
+          <Property Name="TreatyType" Type="nvarchar" MaxLength="10" />
+          <Property Name="TreatyCountry" Type="nvarchar" MaxLength="50" />
+          <Property Name="TINStatus" Type="int" />
+          <Property Name="CTIAccountNo" Type="int" />
+          <Property Name="DocumentStatusCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="IsDeleted" Type="bit" />
+          <Property Name="IsChangeNotified" Type="bit" Nullable="false" />
+          <Property Name="TEFRADate" Type="datetime" />
+          <Property Name="SCorpIndicator" Type="bit" />
+          <Property Name="IsDispensationRequested" Type="bit" />
+          <Property Name="PrimaryBusinessUnit" Type="nvarchar" MaxLength="100" />
+          <Property Name="SecondaryBusinessUnit" Type="nvarchar" MaxLength="100" />
+          <Property Name="TaxAttributesOverridden" Type="bit" />
+          <Property Name="Giin" Type="nvarchar" MaxLength="50" />
+          <Property Name="FatcaStatusCode" Type="varchar" MaxLength="20" />
+          <Property Name="IsUSWA" Type="bit" />
+          <Property Name="PreExisting" Type="bit" Nullable="false" />
+          <Property Name="FatcaStatusDate" Type="datetime" />
+          <Property Name="FatcaStatusSourceId" Type="tinyint" Nullable="false" />
+          <Property Name="GIINStatus" Type="nvarchar" MaxLength="30" />
+          <Property Name="GIINStatusDate" Type="datetime" />
+          <Property Name="DreGiin" Type="nvarchar" MaxLength="20" />
+          <Property Name="CTIOffshoreAccountNo" Type="int" />
+          <Property Name="NAIC" Type="nvarchar" MaxLength="50" />
+          <Property Name="SIC" Type="nvarchar" MaxLength="50" />
+          <Property Name="BIC" Type="nvarchar" MaxLength="50" />
+          <Property Name="BTACodeOfAccounts" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="LegalEntityExtension">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="LegalEntityId" Type="int" Nullable="false" />
+          <Property Name="IsUSIndicia" Type="bit" />
+          <Property Name="USIndiciaDate" Type="datetime" />
+          <Property Name="USIndiciaSourceId" Type="tinyint" />
+          <Property Name="CountryofBirth" Type="nvarchar" MaxLength="2" />
+        </EntityType>
+        <EntityType Name="LESDSCounterparty">
+          <Key>
+            <PropertyRef Name="LegalEntityId" />
+          </Key>
+          <Property Name="LegalEntityId" Type="int" Nullable="false" />
+          <Property Name="SdsId" Type="bigint" />
+          <Property Name="CounterpartyType" Type="char" MaxLength="1" />
+          <Property Name="CounterpartyName" Type="nvarchar" MaxLength="255" />
+          <Property Name="CounterpartyShortName" Type="nvarchar" MaxLength="20" />
+          <Property Name="ParentCounterpartyId" Type="bigint" />
+          <Property Name="CountryOfIncorporation" Type="char" MaxLength="2" />
+          <Property Name="CountryOfOperation" Type="char" MaxLength="2" />
+          <Property Name="TaxId" Type="nvarchar" MaxLength="100" />
+          <Property Name="TaxCountry" Type="char" MaxLength="2" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+          <Property Name="DateOfBirth" Type="date" />
+          <Property Name="CountryOfDomicile" Type="char" MaxLength="2" />
+          <Property Name="NoOfParties" Type="int" />
+          <Property Name="TEFRA" Type="nvarchar" MaxLength="5" />
+          <Property Name="Cnotice" Type="char" MaxLength="1" />
+          <Property Name="DocumentStatus" Type="nvarchar" MaxLength="50" />
+          <Property Name="PayeeType" Type="nvarchar" MaxLength="10" />
+          <Property Name="PayeeStatus" Type="nvarchar" MaxLength="10" />
+          <Property Name="TreatyType" Type="nvarchar" MaxLength="10" />
+          <Property Name="TreatyCountry" Type="nvarchar" MaxLength="50" />
+          <Property Name="TINStatus" Type="int" />
+          <Property Name="CTIAccountNo" Type="int" />
+          <Property Name="DocumentStatusCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="IsDeleted" Type="bit" />
+          <Property Name="IsChangeNotified" Type="bit" Nullable="false" />
+          <Property Name="TEFRADate" Type="datetime" />
+          <Property Name="SCorpIndicator" Type="bit" />
+          <Property Name="IsDispensationRequested" Type="bit" />
+          <Property Name="PrimaryBusinessUnit" Type="nvarchar" MaxLength="100" />
+          <Property Name="SecondaryBusinessUnit" Type="nvarchar" MaxLength="100" />
+          <Property Name="TaxAttributesOverridden" Type="bit" />
+          <Property Name="Giin" Type="nvarchar" MaxLength="50" />
+          <Property Name="FatcaStatusCode" Type="varchar" MaxLength="20" />
+          <Property Name="IsUSWA" Type="bit" />
+          <Property Name="PreExisting" Type="bit" Nullable="false" />
+          <Property Name="FatcaStatusDate" Type="datetime" />
+          <Property Name="FatcaStatusSourceId" Type="tinyint" Nullable="false" />
+          <Property Name="GIINStatus" Type="nvarchar" MaxLength="30" />
+          <Property Name="GIINStatusDate" Type="datetime" />
+          <Property Name="DreGiin" Type="nvarchar" MaxLength="20" />
+          <Property Name="CTIOffshoreAccountNo" Type="int" />
+          <Property Name="IndividualTitle" Type="nvarchar" MaxLength="50" />
+          <Property Name="IndividualMiddleName" Type="nvarchar" MaxLength="255" />
+          <Property Name="IndividualPlaceOfBirth" Type="nvarchar" MaxLength="255" />
+          <Property Name="IndividualCountryOfBirth" Type="nvarchar" MaxLength="255" />
+          <Property Name="IndividualCitizenship" Type="nvarchar" MaxLength="10" />
+          <Property Name="IndividualPassportNumber" Type="nvarchar" MaxLength="100" />
+          <Property Name="IndividualPassportIssuingAuthority" Type="nvarchar" MaxLength="255" />
+          <Property Name="NAIC" Type="nvarchar" MaxLength="50" />
+          <Property Name="SIC" Type="nvarchar" MaxLength="50" />
+          <Property Name="BIC" Type="nvarchar" MaxLength="50" />
+          <Property Name="BTACodeOfAccounts" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="LESubAccountSDSCounterparty">
+          <Key>
+            <PropertyRef Name="LegalEntityId" />
+          </Key>
+          <Property Name="LegalEntityId" Type="int" Nullable="false" />
+          <Property Name="SdsId" Type="bigint" />
+          <Property Name="CounterpartyType" Type="char" MaxLength="2" />
+          <Property Name="CounterpartyName" Type="nvarchar" MaxLength="255" />
+          <Property Name="CounterpartyShortName" Type="nvarchar" MaxLength="20" />
+          <Property Name="ParentCounterpartyId" Type="bigint" />
+          <Property Name="NoOfParties" Type="int" />
+          <Property Name="TEFRA" Type="nvarchar" MaxLength="5" />
+          <Property Name="Cnotice" Type="char" MaxLength="1" />
+          <Property Name="DocumentStatus" Type="nvarchar" MaxLength="50" />
+          <Property Name="PayeeType" Type="nvarchar" MaxLength="10" />
+          <Property Name="PayeeStatus" Type="nvarchar" MaxLength="10" />
+          <Property Name="TreatyType" Type="nvarchar" MaxLength="10" />
+          <Property Name="TreatyCountry" Type="nvarchar" MaxLength="50" />
+          <Property Name="TINStatus" Type="int" />
+          <Property Name="CTIAccountNo" Type="int" />
+          <Property Name="DocumentStatusCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="IsDeleted" Type="bit" />
+          <Property Name="IsChangeNotified" Type="bit" Nullable="false" />
+          <Property Name="TEFRADate" Type="datetime" />
+          <Property Name="SCorpIndicator" Type="bit" />
+          <Property Name="IsDispensationRequested" Type="bit" />
+          <Property Name="PrimaryBusinessUnit" Type="nvarchar" MaxLength="100" />
+          <Property Name="SecondaryBusinessUnit" Type="nvarchar" MaxLength="100" />
+          <Property Name="InvestmentAdvisor" Type="bit" />
+          <Property Name="TaxAttributesOverridden" Type="bit" />
+          <Property Name="Giin" Type="nvarchar" MaxLength="50" />
+          <Property Name="FatcaStatusCode" Type="varchar" MaxLength="20" />
+          <Property Name="IsUSWA" Type="bit" />
+          <Property Name="PreExisting" Type="bit" Nullable="false" />
+          <Property Name="FatcaStatusDate" Type="datetime" />
+          <Property Name="FatcaStatusSourceId" Type="tinyint" Nullable="false" />
+          <Property Name="GIINStatus" Type="nvarchar" MaxLength="30" />
+          <Property Name="GIINStatusDate" Type="datetime" />
+          <Property Name="DreGiin" Type="nvarchar" MaxLength="20" />
+          <Property Name="CTIOffshoreAccountNo" Type="int" />
+        </EntityType>
+        <EntityType Name="LETMSAccount">
+          <Key>
+            <PropertyRef Name="LegalEntityId" />
+          </Key>
+          <Property Name="LegalEntityId" Type="int" Nullable="false" />
+          <Property Name="SdsId" Type="bigint" />
+          <Property Name="AccountId" Type="int" />
+          <Property Name="LongName" Type="nvarchar" MaxLength="120" />
+          <Property Name="ShortName" Type="nvarchar" MaxLength="32" />
+          <Property Name="OwnerQuantity" Type="smallint" />
+          <Property Name="NumberOfProfiles" Type="smallint" />
+          <Property Name="ResidenceCountryCode" Type="char" MaxLength="2" />
+          <Property Name="LegalCountryCode" Type="char" MaxLength="2" />
+          <Property Name="MasterNumber" Type="nvarchar" MaxLength="7" />
+          <Property Name="AccountCategoryType" Type="char" MaxLength="3" />
+          <Property Name="CpiSsiCount" Type="int" />
+          <Property Name="SalespersonId" Type="nvarchar" MaxLength="6" />
+          <Property Name="TaxId" Type="nvarchar" MaxLength="9" />
+          <Property Name="TaxFormat" Type="nvarchar" MaxLength="9" />
+          <Property Name="Status" Type="char" MaxLength="1" />
+          <Property Name="SIndicator" Type="nvarchar" MaxLength="50" />
+          <Property Name="TEFRA" Type="nvarchar" MaxLength="5" />
+          <Property Name="Cnotice" Type="char" MaxLength="1" />
+          <Property Name="DocumentStatus" Type="nvarchar" MaxLength="50" />
+          <Property Name="PayeeType" Type="nvarchar" MaxLength="10" />
+          <Property Name="PayeeStatus" Type="nvarchar" MaxLength="10" />
+          <Property Name="TreatyType" Type="nvarchar" MaxLength="10" />
+          <Property Name="TreatyCountry" Type="nvarchar" MaxLength="50" />
+          <Property Name="TINStatus" Type="int" />
+          <Property Name="CTIAccountNo" Type="int" />
+          <Property Name="DocumentStatusCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="IsDeleted" Type="bit" />
+          <Property Name="AccountType" Type="char" MaxLength="1" />
+          <Property Name="IsChangeNotified" Type="bit" Nullable="false" />
+          <Property Name="AccountNo" Type="bigint" />
+          <Property Name="TEFRADate" Type="datetime" />
+          <Property Name="SCorpIndicator" Type="bit" />
+          <Property Name="PrimaryBusinessUnit" Type="nvarchar" MaxLength="100" />
+          <Property Name="SecondaryBusinessUnit" Type="nvarchar" MaxLength="100" />
+          <Property Name="TaxAttributesOverridden" Type="bit" />
+          <Property Name="Giin" Type="nvarchar" MaxLength="50" />
+          <Property Name="FatcaStatusCode" Type="varchar" MaxLength="20" />
+          <Property Name="IsUSWA" Type="bit" />
+          <Property Name="PreExisting" Type="bit" Nullable="false" />
+          <Property Name="FatcaStatusDate" Type="datetime" />
+          <Property Name="FatcaStatusSourceId" Type="tinyint" Nullable="false" />
+          <Property Name="GIINStatus" Type="nvarchar" MaxLength="30" />
+          <Property Name="GIINStatusDate" Type="datetime" />
+          <Property Name="DreGiin" Type="nvarchar" MaxLength="20" />
+          <Property Name="CTIOffshoreAccountNo" Type="int" />
+        </EntityType>
+        <EntityType Name="LegalEntity">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="1024" Nullable="false" />
+          <Property Name="RowVersion" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+          <Property Name="LegalEntitySubtypeId" Type="smallint" Nullable="false" />
+          <Property Name="LegalEntityCategoryId" Type="smallint" />
+          <Property Name="Active" Type="bit" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="LastUpdatedBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="LastUpdatedDate" Type="datetime" />
+          <Property Name="LegalEntityRoleStatusId" Type="smallint" />
+          <Property Name="IsMigrated" Type="bit" />
+          <Property Name="ReferenceId" Type="nvarchar" MaxLength="128" />
+          <Property Name="Private" Type="bit" />
+          <Property Name="LookupLegalEntityEditStatusId" Type="smallint" />
+          <Property Name="LookupLegalEntityReasonForChangeId" Type="smallint" />
+          <Property Name="OtherReasonNotes" Type="nvarchar" MaxLength="100" />
+          <Property Name="EditingUser" Type="nvarchar" MaxLength="50" />
+          <Property Name="LastVerifiedDate" Type="datetime" />
+          <Property Name="MasterCaseId" Type="int" />
+          <Property Name="EditNotes" Type="nvarchar" MaxLength="200" />
+          <Property Name="CreditReviewDate" Type="datetime" />
+          <Property Name="NextReviewDate" Type="datetime" />
+          <Property Name="LookupLegalEntityStatusId" Type="smallint" />
+          <Property Name="PaymentTypeId" Type="smallint" />
+          <Property Name="AnnualReturnDate" Type="datetime" />
+          <Property Name="LegalJurisdiction" Type="nvarchar" MaxLength="50" />
+          <Property Name="FscsReviewDate" Type="datetime" />
+          <Property Name="GroupEntityId" Type="smallint" />
+          <Property Name="IsCustomer" Type="bit" />
+          <Property Name="NationalCountryId" Type="smallint" />
+        </EntityType>
+        <Association Name="FK_LEBranchSDSCounterparty_LegalEntity">
+          <End Role="LegalEntity" Type="Self.LegalEntity" Multiplicity="1" />
+          <End Role="LEBranchSDSCounterparty" Type="Self.LEBranchSDSCounterparty" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="LegalEntity">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="LEBranchSDSCounterparty">
+              <PropertyRef Name="LegalEntityId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LegalEntityExtension_LegalEntity">
+          <End Role="LegalEntity" Type="Self.LegalEntity" Multiplicity="1" />
+          <End Role="LegalEntityExtension" Type="Self.LegalEntityExtension" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LegalEntity">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="LegalEntityExtension">
+              <PropertyRef Name="LegalEntityId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LESDSCounterparty_LegalEntity">
+          <End Role="LegalEntity" Type="Self.LegalEntity" Multiplicity="1" />
+          <End Role="LESDSCounterparty" Type="Self.LESDSCounterparty" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="LegalEntity">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="LESDSCounterparty">
+              <PropertyRef Name="LegalEntityId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LESubAccountSDSCounterparty_LegalEntity">
+          <End Role="LegalEntity" Type="Self.LegalEntity" Multiplicity="1" />
+          <End Role="LESubAccountSDSCounterparty" Type="Self.LESubAccountSDSCounterparty" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="LegalEntity">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="LESubAccountSDSCounterparty">
+              <PropertyRef Name="LegalEntityId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LETMSAccount_LegalEntity">
+          <End Role="LegalEntity" Type="Self.LegalEntity" Multiplicity="1" />
+          <End Role="LETMSAccount" Type="Self.LETMSAccount" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="LegalEntity">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="LETMSAccount">
+              <PropertyRef Name="LegalEntityId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="FenergoModelStoreContainer">
+          <EntitySet Name="LEBranchSDSCounterparty" EntityType="Self.LEBranchSDSCounterparty" Schema="barc" store:Type="Tables" />
+          <EntitySet Name="LegalEntityExtension" EntityType="Self.LegalEntityExtension" Schema="barc" store:Type="Tables" />
+          <EntitySet Name="LESDSCounterparty" EntityType="Self.LESDSCounterparty" Schema="barc" store:Type="Tables" />
+          <EntitySet Name="LESubAccountSDSCounterparty" EntityType="Self.LESubAccountSDSCounterparty" Schema="barc" store:Type="Tables" />
+          <EntitySet Name="LETMSAccount" EntityType="Self.LETMSAccount" Schema="barc" store:Type="Tables" />
+          <EntitySet Name="LegalEntity" EntityType="Self.LegalEntity" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_LEBranchSDSCounterparty_LegalEntity" Association="Self.FK_LEBranchSDSCounterparty_LegalEntity">
+            <End Role="LegalEntity" EntitySet="LegalEntity" />
+            <End Role="LEBranchSDSCounterparty" EntitySet="LEBranchSDSCounterparty" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LegalEntityExtension_LegalEntity" Association="Self.FK_LegalEntityExtension_LegalEntity">
+            <End Role="LegalEntity" EntitySet="LegalEntity" />
+            <End Role="LegalEntityExtension" EntitySet="LegalEntityExtension" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LESDSCounterparty_LegalEntity" Association="Self.FK_LESDSCounterparty_LegalEntity">
+            <End Role="LegalEntity" EntitySet="LegalEntity" />
+            <End Role="LESDSCounterparty" EntitySet="LESDSCounterparty" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LESubAccountSDSCounterparty_LegalEntity" Association="Self.FK_LESubAccountSDSCounterparty_LegalEntity">
+            <End Role="LegalEntity" EntitySet="LegalEntity" />
+            <End Role="LESubAccountSDSCounterparty" EntitySet="LESubAccountSDSCounterparty" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LETMSAccount_LegalEntity" Association="Self.FK_LETMSAccount_LegalEntity">
+            <End Role="LegalEntity" EntitySet="LegalEntity" />
+            <End Role="LETMSAccount" EntitySet="LETMSAccount" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="FenergoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="LEBranchSDSCounterparty">
+          <Key>
+            <PropertyRef Name="LegalEntityId" />
+          </Key>
+          <Property Name="LegalEntityId" Type="Int32" Nullable="false" />
+          <Property Name="SdsId" Type="Int64" />
+          <Property Name="CounterpartyType" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="CounterpartyName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CounterpartyShortName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ParentCounterpartyId" Type="Int64" />
+          <Property Name="CountryOfOperation" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="NoOfParties" Type="Int32" />
+          <Property Name="TEFRA" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="Cnotice" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="DocumentStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PayeeType" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="PayeeStatus" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="TreatyType" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="TreatyCountry" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TINStatus" Type="Int32" />
+          <Property Name="CTIAccountNo" Type="Int32" />
+          <Property Name="DocumentStatusCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IsDeleted" Type="Boolean" />
+          <Property Name="IsChangeNotified" Type="Boolean" Nullable="false" />
+          <Property Name="TEFRADate" Type="DateTime" Precision="3" />
+          <Property Name="SCorpIndicator" Type="Boolean" />
+          <Property Name="IsDispensationRequested" Type="Boolean" />
+          <Property Name="PrimaryBusinessUnit" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="SecondaryBusinessUnit" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="TaxAttributesOverridden" Type="Boolean" />
+          <Property Name="Giin" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FatcaStatusCode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="IsUSWA" Type="Boolean" />
+          <Property Name="PreExisting" Type="Boolean" Nullable="false" />
+          <Property Name="FatcaStatusDate" Type="DateTime" Precision="3" />
+          <Property Name="FatcaStatusSourceId" Type="Byte" Nullable="false" />
+          <Property Name="GIINStatus" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="GIINStatusDate" Type="DateTime" Precision="3" />
+          <Property Name="DreGiin" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="CTIOffshoreAccountNo" Type="Int32" />
+          <Property Name="NAIC" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SIC" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BIC" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BTACodeOfAccounts" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="LegalEntity" Relationship="Self.FK_LEBranchSDSCounterparty_LegalEntity" FromRole="LEBranchSDSCounterparty" ToRole="LegalEntity" />
+        </EntityType>
+        <EntityType Name="LegalEntityExtension">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LegalEntityId" Type="Int32" Nullable="false" />
+          <Property Name="IsUSIndicia" Type="Boolean" />
+          <Property Name="USIndiciaDate" Type="DateTime" Precision="3" />
+          <Property Name="USIndiciaSourceId" Type="Byte" />
+          <Property Name="CountryofBirth" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="LegalEntity" Relationship="Self.FK_LegalEntityExtension_LegalEntity" FromRole="LegalEntityExtension" ToRole="LegalEntity" />
+        </EntityType>
+        <EntityType Name="LESDSCounterparty">
+          <Key>
+            <PropertyRef Name="LegalEntityId" />
+          </Key>
+          <Property Name="LegalEntityId" Type="Int32" Nullable="false" />
+          <Property Name="SdsId" Type="Int64" />
+          <Property Name="CounterpartyType" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="CounterpartyName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CounterpartyShortName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ParentCounterpartyId" Type="Int64" />
+          <Property Name="CountryOfIncorporation" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="CountryOfOperation" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="TaxId" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="TaxCountry" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DateOfBirth" Type="DateTime" Precision="0" />
+          <Property Name="CountryOfDomicile" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="NoOfParties" Type="Int32" />
+          <Property Name="TEFRA" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="Cnotice" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="DocumentStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PayeeType" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="PayeeStatus" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="TreatyType" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="TreatyCountry" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TINStatus" Type="Int32" />
+          <Property Name="CTIAccountNo" Type="Int32" />
+          <Property Name="DocumentStatusCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IsDeleted" Type="Boolean" />
+          <Property Name="IsChangeNotified" Type="Boolean" Nullable="false" />
+          <Property Name="TEFRADate" Type="DateTime" Precision="3" />
+          <Property Name="SCorpIndicator" Type="Boolean" />
+          <Property Name="IsDispensationRequested" Type="Boolean" />
+          <Property Name="PrimaryBusinessUnit" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="SecondaryBusinessUnit" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="TaxAttributesOverridden" Type="Boolean" />
+          <Property Name="Giin" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FatcaStatusCode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="IsUSWA" Type="Boolean" />
+          <Property Name="PreExisting" Type="Boolean" Nullable="false" />
+          <Property Name="FatcaStatusDate" Type="DateTime" Precision="3" />
+          <Property Name="FatcaStatusSourceId" Type="Byte" Nullable="false" />
+          <Property Name="GIINStatus" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="GIINStatusDate" Type="DateTime" Precision="3" />
+          <Property Name="DreGiin" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="CTIOffshoreAccountNo" Type="Int32" />
+          <Property Name="IndividualTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IndividualMiddleName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="IndividualPlaceOfBirth" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="IndividualCountryOfBirth" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="IndividualCitizenship" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="IndividualPassportNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="IndividualPassportIssuingAuthority" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="NAIC" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SIC" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BIC" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BTACodeOfAccounts" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="LegalEntity" Relationship="Self.FK_LESDSCounterparty_LegalEntity" FromRole="LESDSCounterparty" ToRole="LegalEntity" />
+        </EntityType>
+        <EntityType Name="LESubAccountSDSCounterparty">
+          <Key>
+            <PropertyRef Name="LegalEntityId" />
+          </Key>
+          <Property Name="LegalEntityId" Type="Int32" Nullable="false" />
+          <Property Name="SdsId" Type="Int64" />
+          <Property Name="CounterpartyType" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="CounterpartyName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CounterpartyShortName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ParentCounterpartyId" Type="Int64" />
+          <Property Name="NoOfParties" Type="Int32" />
+          <Property Name="TEFRA" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="Cnotice" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="DocumentStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PayeeType" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="PayeeStatus" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="TreatyType" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="TreatyCountry" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TINStatus" Type="Int32" />
+          <Property Name="CTIAccountNo" Type="Int32" />
+          <Property Name="DocumentStatusCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IsDeleted" Type="Boolean" />
+          <Property Name="IsChangeNotified" Type="Boolean" Nullable="false" />
+          <Property Name="TEFRADate" Type="DateTime" Precision="3" />
+          <Property Name="SCorpIndicator" Type="Boolean" />
+          <Property Name="IsDispensationRequested" Type="Boolean" />
+          <Property Name="PrimaryBusinessUnit" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="SecondaryBusinessUnit" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="InvestmentAdvisor" Type="Boolean" />
+          <Property Name="TaxAttributesOverridden" Type="Boolean" />
+          <Property Name="Giin" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FatcaStatusCode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="IsUSWA" Type="Boolean" />
+          <Property Name="PreExisting" Type="Boolean" Nullable="false" />
+          <Property Name="FatcaStatusDate" Type="DateTime" Precision="3" />
+          <Property Name="FatcaStatusSourceId" Type="Byte" Nullable="false" />
+          <Property Name="GIINStatus" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="GIINStatusDate" Type="DateTime" Precision="3" />
+          <Property Name="DreGiin" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="CTIOffshoreAccountNo" Type="Int32" />
+          <NavigationProperty Name="LegalEntity" Relationship="Self.FK_LESubAccountSDSCounterparty_LegalEntity" FromRole="LESubAccountSDSCounterparty" ToRole="LegalEntity" />
+        </EntityType>
+        <EntityType Name="LETMSAccount">
+          <Key>
+            <PropertyRef Name="LegalEntityId" />
+          </Key>
+          <Property Name="LegalEntityId" Type="Int32" Nullable="false" />
+          <Property Name="SdsId" Type="Int64" />
+          <Property Name="AccountId" Type="Int32" />
+          <Property Name="LongName" Type="String" MaxLength="120" FixedLength="false" Unicode="true" />
+          <Property Name="ShortName" Type="String" MaxLength="32" FixedLength="false" Unicode="true" />
+          <Property Name="OwnerQuantity" Type="Int16" />
+          <Property Name="NumberOfProfiles" Type="Int16" />
+          <Property Name="ResidenceCountryCode" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="LegalCountryCode" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="MasterNumber" Type="String" MaxLength="7" FixedLength="false" Unicode="true" />
+          <Property Name="AccountCategoryType" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="CpiSsiCount" Type="Int32" />
+          <Property Name="SalespersonId" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Name="TaxId" Type="String" MaxLength="9" FixedLength="false" Unicode="true" />
+          <Property Name="TaxFormat" Type="String" MaxLength="9" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="SIndicator" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TEFRA" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="Cnotice" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="DocumentStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PayeeType" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="PayeeStatus" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="TreatyType" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="TreatyCountry" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TINStatus" Type="Int32" />
+          <Property Name="CTIAccountNo" Type="Int32" />
+          <Property Name="DocumentStatusCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IsDeleted" Type="Boolean" />
+          <Property Name="AccountType" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="IsChangeNotified" Type="Boolean" Nullable="false" />
+          <Property Name="AccountNo" Type="Int64" />
+          <Property Name="TEFRADate" Type="DateTime" Precision="3" />
+          <Property Name="SCorpIndicator" Type="Boolean" />
+          <Property Name="PrimaryBusinessUnit" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="SecondaryBusinessUnit" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="TaxAttributesOverridden" Type="Boolean" />
+          <Property Name="Giin" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FatcaStatusCode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="IsUSWA" Type="Boolean" />
+          <Property Name="PreExisting" Type="Boolean" Nullable="false" />
+          <Property Name="FatcaStatusDate" Type="DateTime" Precision="3" />
+          <Property Name="FatcaStatusSourceId" Type="Byte" Nullable="false" />
+          <Property Name="GIINStatus" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="GIINStatusDate" Type="DateTime" Precision="3" />
+          <Property Name="DreGiin" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="CTIOffshoreAccountNo" Type="Int32" />
+          <NavigationProperty Name="LegalEntity" Relationship="Self.FK_LETMSAccount_LegalEntity" FromRole="LETMSAccount" ToRole="LegalEntity" />
+        </EntityType>
+        <EntityType Name="LegalEntity">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="1024" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="RowVersion" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="LegalEntitySubtypeId" Type="Int16" Nullable="false" />
+          <Property Name="LegalEntityCategoryId" Type="Int16" />
+          <Property Name="Active" Type="Boolean" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LastUpdatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LastUpdatedDate" Type="DateTime" Precision="3" />
+          <Property Name="LegalEntityRoleStatusId" Type="Int16" />
+          <Property Name="IsMigrated" Type="Boolean" />
+          <Property Name="ReferenceId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Private" Type="Boolean" />
+          <Property Name="LookupLegalEntityEditStatusId" Type="Int16" />
+          <Property Name="LookupLegalEntityReasonForChangeId" Type="Int16" />
+          <Property Name="OtherReasonNotes" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="EditingUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LastVerifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="MasterCaseId" Type="Int32" />
+          <Property Name="EditNotes" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="CreditReviewDate" Type="DateTime" Precision="3" />
+          <Property Name="NextReviewDate" Type="DateTime" Precision="3" />
+          <Property Name="LookupLegalEntityStatusId" Type="Int16" />
+          <Property Name="PaymentTypeId" Type="Int16" />
+          <Property Name="AnnualReturnDate" Type="DateTime" Precision="3" />
+          <Property Name="LegalJurisdiction" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FscsReviewDate" Type="DateTime" Precision="3" />
+          <Property Name="GroupEntityId" Type="Int16" />
+          <Property Name="IsCustomer" Type="Boolean" />
+          <Property Name="NationalCountryId" Type="Int16" />
+          <NavigationProperty Name="LEBranchSDSCounterparty" Relationship="Self.FK_LEBranchSDSCounterparty_LegalEntity" FromRole="LegalEntity" ToRole="LEBranchSDSCounterparty" />
+          <NavigationProperty Name="LegalEntityExtensions" Relationship="Self.FK_LegalEntityExtension_LegalEntity" FromRole="LegalEntity" ToRole="LegalEntityExtension" />
+          <NavigationProperty Name="LESDSCounterparty" Relationship="Self.FK_LESDSCounterparty_LegalEntity" FromRole="LegalEntity" ToRole="LESDSCounterparty" />
+          <NavigationProperty Name="LESubAccountSDSCounterparty" Relationship="Self.FK_LESubAccountSDSCounterparty_LegalEntity" FromRole="LegalEntity" ToRole="LESubAccountSDSCounterparty" />
+          <NavigationProperty Name="LETMSAccount" Relationship="Self.FK_LETMSAccount_LegalEntity" FromRole="LegalEntity" ToRole="LETMSAccount" />
+        </EntityType>
+        <Association Name="FK_LEBranchSDSCounterparty_LegalEntity">
+          <End Role="LegalEntity" Type="Self.LegalEntity" Multiplicity="1" />
+          <End Role="LEBranchSDSCounterparty" Type="Self.LEBranchSDSCounterparty" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="LegalEntity">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="LEBranchSDSCounterparty">
+              <PropertyRef Name="LegalEntityId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LegalEntityExtension_LegalEntity">
+          <End Role="LegalEntity" Type="Self.LegalEntity" Multiplicity="1" />
+          <End Role="LegalEntityExtension" Type="Self.LegalEntityExtension" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LegalEntity">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="LegalEntityExtension">
+              <PropertyRef Name="LegalEntityId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LESDSCounterparty_LegalEntity">
+          <End Role="LegalEntity" Type="Self.LegalEntity" Multiplicity="1" />
+          <End Role="LESDSCounterparty" Type="Self.LESDSCounterparty" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="LegalEntity">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="LESDSCounterparty">
+              <PropertyRef Name="LegalEntityId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LESubAccountSDSCounterparty_LegalEntity">
+          <End Role="LegalEntity" Type="Self.LegalEntity" Multiplicity="1" />
+          <End Role="LESubAccountSDSCounterparty" Type="Self.LESubAccountSDSCounterparty" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="LegalEntity">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="LESubAccountSDSCounterparty">
+              <PropertyRef Name="LegalEntityId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LETMSAccount_LegalEntity">
+          <End Role="LegalEntity" Type="Self.LegalEntity" Multiplicity="1" />
+          <End Role="LETMSAccount" Type="Self.LETMSAccount" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="LegalEntity">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="LETMSAccount">
+              <PropertyRef Name="LegalEntityId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="FenergoEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="LEBranchSDSCounterparties" EntityType="Self.LEBranchSDSCounterparty" />
+          <EntitySet Name="LegalEntityExtensions" EntityType="Self.LegalEntityExtension" />
+          <EntitySet Name="LESDSCounterparties" EntityType="Self.LESDSCounterparty" />
+          <EntitySet Name="LESubAccountSDSCounterparties" EntityType="Self.LESubAccountSDSCounterparty" />
+          <EntitySet Name="LETMSAccounts" EntityType="Self.LETMSAccount" />
+          <EntitySet Name="LegalEntities" EntityType="Self.LegalEntity" />
+          <AssociationSet Name="FK_LEBranchSDSCounterparty_LegalEntity" Association="Self.FK_LEBranchSDSCounterparty_LegalEntity">
+            <End Role="LegalEntity" EntitySet="LegalEntities" />
+            <End Role="LEBranchSDSCounterparty" EntitySet="LEBranchSDSCounterparties" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LegalEntityExtension_LegalEntity" Association="Self.FK_LegalEntityExtension_LegalEntity">
+            <End Role="LegalEntity" EntitySet="LegalEntities" />
+            <End Role="LegalEntityExtension" EntitySet="LegalEntityExtensions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LESDSCounterparty_LegalEntity" Association="Self.FK_LESDSCounterparty_LegalEntity">
+            <End Role="LegalEntity" EntitySet="LegalEntities" />
+            <End Role="LESDSCounterparty" EntitySet="LESDSCounterparties" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LESubAccountSDSCounterparty_LegalEntity" Association="Self.FK_LESubAccountSDSCounterparty_LegalEntity">
+            <End Role="LegalEntity" EntitySet="LegalEntities" />
+            <End Role="LESubAccountSDSCounterparty" EntitySet="LESubAccountSDSCounterparties" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LETMSAccount_LegalEntity" Association="Self.FK_LETMSAccount_LegalEntity">
+            <End Role="LegalEntity" EntitySet="LegalEntities" />
+            <End Role="LETMSAccount" EntitySet="LETMSAccounts" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="FenergoModelStoreContainer" CdmEntityContainer="FenergoEntities">
+          <EntitySetMapping Name="LEBranchSDSCounterparties">
+            <EntityTypeMapping TypeName="FenergoModel.LEBranchSDSCounterparty">
+              <MappingFragment StoreEntitySet="LEBranchSDSCounterparty">
+                <ScalarProperty Name="LegalEntityId" ColumnName="LegalEntityId" />
+                <ScalarProperty Name="SdsId" ColumnName="SdsId" />
+                <ScalarProperty Name="CounterpartyType" ColumnName="CounterpartyType" />
+                <ScalarProperty Name="CounterpartyName" ColumnName="CounterpartyName" />
+                <ScalarProperty Name="CounterpartyShortName" ColumnName="CounterpartyShortName" />
+                <ScalarProperty Name="ParentCounterpartyId" ColumnName="ParentCounterpartyId" />
+                <ScalarProperty Name="CountryOfOperation" ColumnName="CountryOfOperation" />
+                <ScalarProperty Name="NoOfParties" ColumnName="NoOfParties" />
+                <ScalarProperty Name="TEFRA" ColumnName="TEFRA" />
+                <ScalarProperty Name="Cnotice" ColumnName="Cnotice" />
+                <ScalarProperty Name="DocumentStatus" ColumnName="DocumentStatus" />
+                <ScalarProperty Name="PayeeType" ColumnName="PayeeType" />
+                <ScalarProperty Name="PayeeStatus" ColumnName="PayeeStatus" />
+                <ScalarProperty Name="TreatyType" ColumnName="TreatyType" />
+                <ScalarProperty Name="TreatyCountry" ColumnName="TreatyCountry" />
+                <ScalarProperty Name="TINStatus" ColumnName="TINStatus" />
+                <ScalarProperty Name="CTIAccountNo" ColumnName="CTIAccountNo" />
+                <ScalarProperty Name="DocumentStatusCode" ColumnName="DocumentStatusCode" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="IsChangeNotified" ColumnName="IsChangeNotified" />
+                <ScalarProperty Name="TEFRADate" ColumnName="TEFRADate" />
+                <ScalarProperty Name="SCorpIndicator" ColumnName="SCorpIndicator" />
+                <ScalarProperty Name="IsDispensationRequested" ColumnName="IsDispensationRequested" />
+                <ScalarProperty Name="PrimaryBusinessUnit" ColumnName="PrimaryBusinessUnit" />
+                <ScalarProperty Name="SecondaryBusinessUnit" ColumnName="SecondaryBusinessUnit" />
+                <ScalarProperty Name="TaxAttributesOverridden" ColumnName="TaxAttributesOverridden" />
+                <ScalarProperty Name="Giin" ColumnName="Giin" />
+                <ScalarProperty Name="FatcaStatusCode" ColumnName="FatcaStatusCode" />
+                <ScalarProperty Name="IsUSWA" ColumnName="IsUSWA" />
+                <ScalarProperty Name="PreExisting" ColumnName="PreExisting" />
+                <ScalarProperty Name="FatcaStatusDate" ColumnName="FatcaStatusDate" />
+                <ScalarProperty Name="FatcaStatusSourceId" ColumnName="FatcaStatusSourceId" />
+                <ScalarProperty Name="GIINStatus" ColumnName="GIINStatus" />
+                <ScalarProperty Name="GIINStatusDate" ColumnName="GIINStatusDate" />
+                <ScalarProperty Name="DreGiin" ColumnName="DreGiin" />
+                <ScalarProperty Name="CTIOffshoreAccountNo" ColumnName="CTIOffshoreAccountNo" />
+                <ScalarProperty Name="NAIC" ColumnName="NAIC" />
+                <ScalarProperty Name="SIC" ColumnName="SIC" />
+                <ScalarProperty Name="BIC" ColumnName="BIC" />
+                <ScalarProperty Name="BTACodeOfAccounts" ColumnName="BTACodeOfAccounts" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LegalEntityExtensions">
+            <EntityTypeMapping TypeName="FenergoModel.LegalEntityExtension">
+              <MappingFragment StoreEntitySet="LegalEntityExtension">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="LegalEntityId" ColumnName="LegalEntityId" />
+                <ScalarProperty Name="IsUSIndicia" ColumnName="IsUSIndicia" />
+                <ScalarProperty Name="USIndiciaDate" ColumnName="USIndiciaDate" />
+                <ScalarProperty Name="USIndiciaSourceId" ColumnName="USIndiciaSourceId" />
+                <ScalarProperty Name="CountryofBirth" ColumnName="CountryofBirth" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LESDSCounterparties">
+            <EntityTypeMapping TypeName="FenergoModel.LESDSCounterparty">
+              <MappingFragment StoreEntitySet="LESDSCounterparty">
+                <ScalarProperty Name="LegalEntityId" ColumnName="LegalEntityId" />
+                <ScalarProperty Name="SdsId" ColumnName="SdsId" />
+                <ScalarProperty Name="CounterpartyType" ColumnName="CounterpartyType" />
+                <ScalarProperty Name="CounterpartyName" ColumnName="CounterpartyName" />
+                <ScalarProperty Name="CounterpartyShortName" ColumnName="CounterpartyShortName" />
+                <ScalarProperty Name="ParentCounterpartyId" ColumnName="ParentCounterpartyId" />
+                <ScalarProperty Name="CountryOfIncorporation" ColumnName="CountryOfIncorporation" />
+                <ScalarProperty Name="CountryOfOperation" ColumnName="CountryOfOperation" />
+                <ScalarProperty Name="TaxId" ColumnName="TaxId" />
+                <ScalarProperty Name="TaxCountry" ColumnName="TaxCountry" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+                <ScalarProperty Name="CountryOfDomicile" ColumnName="CountryOfDomicile" />
+                <ScalarProperty Name="NoOfParties" ColumnName="NoOfParties" />
+                <ScalarProperty Name="TEFRA" ColumnName="TEFRA" />
+                <ScalarProperty Name="Cnotice" ColumnName="Cnotice" />
+                <ScalarProperty Name="DocumentStatus" ColumnName="DocumentStatus" />
+                <ScalarProperty Name="PayeeType" ColumnName="PayeeType" />
+                <ScalarProperty Name="PayeeStatus" ColumnName="PayeeStatus" />
+                <ScalarProperty Name="TreatyType" ColumnName="TreatyType" />
+                <ScalarProperty Name="TreatyCountry" ColumnName="TreatyCountry" />
+                <ScalarProperty Name="TINStatus" ColumnName="TINStatus" />
+                <ScalarProperty Name="CTIAccountNo" ColumnName="CTIAccountNo" />
+                <ScalarProperty Name="DocumentStatusCode" ColumnName="DocumentStatusCode" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="IsChangeNotified" ColumnName="IsChangeNotified" />
+                <ScalarProperty Name="TEFRADate" ColumnName="TEFRADate" />
+                <ScalarProperty Name="SCorpIndicator" ColumnName="SCorpIndicator" />
+                <ScalarProperty Name="IsDispensationRequested" ColumnName="IsDispensationRequested" />
+                <ScalarProperty Name="PrimaryBusinessUnit" ColumnName="PrimaryBusinessUnit" />
+                <ScalarProperty Name="SecondaryBusinessUnit" ColumnName="SecondaryBusinessUnit" />
+                <ScalarProperty Name="TaxAttributesOverridden" ColumnName="TaxAttributesOverridden" />
+                <ScalarProperty Name="Giin" ColumnName="Giin" />
+                <ScalarProperty Name="FatcaStatusCode" ColumnName="FatcaStatusCode" />
+                <ScalarProperty Name="IsUSWA" ColumnName="IsUSWA" />
+                <ScalarProperty Name="PreExisting" ColumnName="PreExisting" />
+                <ScalarProperty Name="FatcaStatusDate" ColumnName="FatcaStatusDate" />
+                <ScalarProperty Name="FatcaStatusSourceId" ColumnName="FatcaStatusSourceId" />
+                <ScalarProperty Name="GIINStatus" ColumnName="GIINStatus" />
+                <ScalarProperty Name="GIINStatusDate" ColumnName="GIINStatusDate" />
+                <ScalarProperty Name="DreGiin" ColumnName="DreGiin" />
+                <ScalarProperty Name="CTIOffshoreAccountNo" ColumnName="CTIOffshoreAccountNo" />
+                <ScalarProperty Name="IndividualTitle" ColumnName="IndividualTitle" />
+                <ScalarProperty Name="IndividualMiddleName" ColumnName="IndividualMiddleName" />
+                <ScalarProperty Name="IndividualPlaceOfBirth" ColumnName="IndividualPlaceOfBirth" />
+                <ScalarProperty Name="IndividualCountryOfBirth" ColumnName="IndividualCountryOfBirth" />
+                <ScalarProperty Name="IndividualCitizenship" ColumnName="IndividualCitizenship" />
+                <ScalarProperty Name="IndividualPassportNumber" ColumnName="IndividualPassportNumber" />
+                <ScalarProperty Name="IndividualPassportIssuingAuthority" ColumnName="IndividualPassportIssuingAuthority" />
+                <ScalarProperty Name="NAIC" ColumnName="NAIC" />
+                <ScalarProperty Name="SIC" ColumnName="SIC" />
+                <ScalarProperty Name="BIC" ColumnName="BIC" />
+                <ScalarProperty Name="BTACodeOfAccounts" ColumnName="BTACodeOfAccounts" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LESubAccountSDSCounterparties">
+            <EntityTypeMapping TypeName="FenergoModel.LESubAccountSDSCounterparty">
+              <MappingFragment StoreEntitySet="LESubAccountSDSCounterparty">
+                <ScalarProperty Name="LegalEntityId" ColumnName="LegalEntityId" />
+                <ScalarProperty Name="SdsId" ColumnName="SdsId" />
+                <ScalarProperty Name="CounterpartyType" ColumnName="CounterpartyType" />
+                <ScalarProperty Name="CounterpartyName" ColumnName="CounterpartyName" />
+                <ScalarProperty Name="CounterpartyShortName" ColumnName="CounterpartyShortName" />
+                <ScalarProperty Name="ParentCounterpartyId" ColumnName="ParentCounterpartyId" />
+                <ScalarProperty Name="NoOfParties" ColumnName="NoOfParties" />
+                <ScalarProperty Name="TEFRA" ColumnName="TEFRA" />
+                <ScalarProperty Name="Cnotice" ColumnName="Cnotice" />
+                <ScalarProperty Name="DocumentStatus" ColumnName="DocumentStatus" />
+                <ScalarProperty Name="PayeeType" ColumnName="PayeeType" />
+                <ScalarProperty Name="PayeeStatus" ColumnName="PayeeStatus" />
+                <ScalarProperty Name="TreatyType" ColumnName="TreatyType" />
+                <ScalarProperty Name="TreatyCountry" ColumnName="TreatyCountry" />
+                <ScalarProperty Name="TINStatus" ColumnName="TINStatus" />
+                <ScalarProperty Name="CTIAccountNo" ColumnName="CTIAccountNo" />
+                <ScalarProperty Name="DocumentStatusCode" ColumnName="DocumentStatusCode" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="IsChangeNotified" ColumnName="IsChangeNotified" />
+                <ScalarProperty Name="TEFRADate" ColumnName="TEFRADate" />
+                <ScalarProperty Name="SCorpIndicator" ColumnName="SCorpIndicator" />
+                <ScalarProperty Name="IsDispensationRequested" ColumnName="IsDispensationRequested" />
+                <ScalarProperty Name="PrimaryBusinessUnit" ColumnName="PrimaryBusinessUnit" />
+                <ScalarProperty Name="SecondaryBusinessUnit" ColumnName="SecondaryBusinessUnit" />
+                <ScalarProperty Name="InvestmentAdvisor" ColumnName="InvestmentAdvisor" />
+                <ScalarProperty Name="TaxAttributesOverridden" ColumnName="TaxAttributesOverridden" />
+                <ScalarProperty Name="Giin" ColumnName="Giin" />
+                <ScalarProperty Name="FatcaStatusCode" ColumnName="FatcaStatusCode" />
+                <ScalarProperty Name="IsUSWA" ColumnName="IsUSWA" />
+                <ScalarProperty Name="PreExisting" ColumnName="PreExisting" />
+                <ScalarProperty Name="FatcaStatusDate" ColumnName="FatcaStatusDate" />
+                <ScalarProperty Name="FatcaStatusSourceId" ColumnName="FatcaStatusSourceId" />
+                <ScalarProperty Name="GIINStatus" ColumnName="GIINStatus" />
+                <ScalarProperty Name="GIINStatusDate" ColumnName="GIINStatusDate" />
+                <ScalarProperty Name="DreGiin" ColumnName="DreGiin" />
+                <ScalarProperty Name="CTIOffshoreAccountNo" ColumnName="CTIOffshoreAccountNo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LETMSAccounts">
+            <EntityTypeMapping TypeName="FenergoModel.LETMSAccount">
+              <MappingFragment StoreEntitySet="LETMSAccount">
+                <ScalarProperty Name="LegalEntityId" ColumnName="LegalEntityId" />
+                <ScalarProperty Name="SdsId" ColumnName="SdsId" />
+                <ScalarProperty Name="AccountId" ColumnName="AccountId" />
+                <ScalarProperty Name="LongName" ColumnName="LongName" />
+                <ScalarProperty Name="ShortName" ColumnName="ShortName" />
+                <ScalarProperty Name="OwnerQuantity" ColumnName="OwnerQuantity" />
+                <ScalarProperty Name="NumberOfProfiles" ColumnName="NumberOfProfiles" />
+                <ScalarProperty Name="ResidenceCountryCode" ColumnName="ResidenceCountryCode" />
+                <ScalarProperty Name="LegalCountryCode" ColumnName="LegalCountryCode" />
+                <ScalarProperty Name="MasterNumber" ColumnName="MasterNumber" />
+                <ScalarProperty Name="AccountCategoryType" ColumnName="AccountCategoryType" />
+                <ScalarProperty Name="CpiSsiCount" ColumnName="CpiSsiCount" />
+                <ScalarProperty Name="SalespersonId" ColumnName="SalespersonId" />
+                <ScalarProperty Name="TaxId" ColumnName="TaxId" />
+                <ScalarProperty Name="TaxFormat" ColumnName="TaxFormat" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="SIndicator" ColumnName="SIndicator" />
+                <ScalarProperty Name="TEFRA" ColumnName="TEFRA" />
+                <ScalarProperty Name="Cnotice" ColumnName="Cnotice" />
+                <ScalarProperty Name="DocumentStatus" ColumnName="DocumentStatus" />
+                <ScalarProperty Name="PayeeType" ColumnName="PayeeType" />
+                <ScalarProperty Name="PayeeStatus" ColumnName="PayeeStatus" />
+                <ScalarProperty Name="TreatyType" ColumnName="TreatyType" />
+                <ScalarProperty Name="TreatyCountry" ColumnName="TreatyCountry" />
+                <ScalarProperty Name="TINStatus" ColumnName="TINStatus" />
+                <ScalarProperty Name="CTIAccountNo" ColumnName="CTIAccountNo" />
+                <ScalarProperty Name="DocumentStatusCode" ColumnName="DocumentStatusCode" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="AccountType" ColumnName="AccountType" />
+                <ScalarProperty Name="IsChangeNotified" ColumnName="IsChangeNotified" />
+                <ScalarProperty Name="AccountNo" ColumnName="AccountNo" />
+                <ScalarProperty Name="TEFRADate" ColumnName="TEFRADate" />
+                <ScalarProperty Name="SCorpIndicator" ColumnName="SCorpIndicator" />
+                <ScalarProperty Name="PrimaryBusinessUnit" ColumnName="PrimaryBusinessUnit" />
+                <ScalarProperty Name="SecondaryBusinessUnit" ColumnName="SecondaryBusinessUnit" />
+                <ScalarProperty Name="TaxAttributesOverridden" ColumnName="TaxAttributesOverridden" />
+                <ScalarProperty Name="Giin" ColumnName="Giin" />
+                <ScalarProperty Name="FatcaStatusCode" ColumnName="FatcaStatusCode" />
+                <ScalarProperty Name="IsUSWA" ColumnName="IsUSWA" />
+                <ScalarProperty Name="PreExisting" ColumnName="PreExisting" />
+                <ScalarProperty Name="FatcaStatusDate" ColumnName="FatcaStatusDate" />
+                <ScalarProperty Name="FatcaStatusSourceId" ColumnName="FatcaStatusSourceId" />
+                <ScalarProperty Name="GIINStatus" ColumnName="GIINStatus" />
+                <ScalarProperty Name="GIINStatusDate" ColumnName="GIINStatusDate" />
+                <ScalarProperty Name="DreGiin" ColumnName="DreGiin" />
+                <ScalarProperty Name="CTIOffshoreAccountNo" ColumnName="CTIOffshoreAccountNo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LegalEntities">
+            <EntityTypeMapping TypeName="FenergoModel.LegalEntity">
+              <MappingFragment StoreEntitySet="LegalEntity">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+                <ScalarProperty Name="LegalEntitySubtypeId" ColumnName="LegalEntitySubtypeId" />
+                <ScalarProperty Name="LegalEntityCategoryId" ColumnName="LegalEntityCategoryId" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="LastUpdatedBy" ColumnName="LastUpdatedBy" />
+                <ScalarProperty Name="LastUpdatedDate" ColumnName="LastUpdatedDate" />
+                <ScalarProperty Name="LegalEntityRoleStatusId" ColumnName="LegalEntityRoleStatusId" />
+                <ScalarProperty Name="IsMigrated" ColumnName="IsMigrated" />
+                <ScalarProperty Name="ReferenceId" ColumnName="ReferenceId" />
+                <ScalarProperty Name="Private" ColumnName="Private" />
+                <ScalarProperty Name="LookupLegalEntityEditStatusId" ColumnName="LookupLegalEntityEditStatusId" />
+                <ScalarProperty Name="LookupLegalEntityReasonForChangeId" ColumnName="LookupLegalEntityReasonForChangeId" />
+                <ScalarProperty Name="OtherReasonNotes" ColumnName="OtherReasonNotes" />
+                <ScalarProperty Name="EditingUser" ColumnName="EditingUser" />
+                <ScalarProperty Name="LastVerifiedDate" ColumnName="LastVerifiedDate" />
+                <ScalarProperty Name="MasterCaseId" ColumnName="MasterCaseId" />
+                <ScalarProperty Name="EditNotes" ColumnName="EditNotes" />
+                <ScalarProperty Name="CreditReviewDate" ColumnName="CreditReviewDate" />
+                <ScalarProperty Name="NextReviewDate" ColumnName="NextReviewDate" />
+                <ScalarProperty Name="LookupLegalEntityStatusId" ColumnName="LookupLegalEntityStatusId" />
+                <ScalarProperty Name="PaymentTypeId" ColumnName="PaymentTypeId" />
+                <ScalarProperty Name="AnnualReturnDate" ColumnName="AnnualReturnDate" />
+                <ScalarProperty Name="LegalJurisdiction" ColumnName="LegalJurisdiction" />
+                <ScalarProperty Name="FscsReviewDate" ColumnName="FscsReviewDate" />
+                <ScalarProperty Name="GroupEntityId" ColumnName="GroupEntityId" />
+                <ScalarProperty Name="IsCustomer" ColumnName="IsCustomer" />
+                <ScalarProperty Name="NationalCountryId" ColumnName="NationalCountryId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

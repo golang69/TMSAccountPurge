@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="true"?>
+<service xmlns="http://www.w3.org/2007/app" xmlns:app="http://www.w3.org/2007/app" xmlns:atom="http://www.w3.org/2005/Atom" xml:base="http://nykpsr11076:8081/nexus/service/local/nuget/nuget-public/">
+  <workspace>
+    <atom:title>Default</atom:title>
+    <collection href="Packages">
+      <atom:title>Packages</atom:title>
+    </collection>
+  </workspace>
+</service>

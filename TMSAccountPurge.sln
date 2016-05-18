@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Driver", "Driver\Driver.csproj", "{190FCADC-D3A1-4A45-9B8F-90DDF22D37BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business", "Business\Business.csproj", "{3C3BB37B-F61E-4C85-A2AB-A5544331038A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{49F9BD8A-1434-4BD0-8342-F252D1DCBFD3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{459C6E60-E698-4A98-9B73-F7155718842E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{628B4E4B-A952-4867-BBE3-C3F60F408732}"
+	ProjectSection(SolutionItems) = preProject
+		Account.xml = Account.xml
+		CounterpartyMessage.txt = CounterpartyMessage.txt
+		PURGE_ACCT_2015.txt = PURGE_ACCT_2015.txt
+		RestartPoint.txt = RestartPoint.txt
+		XMLFile1.xml = XMLFile1.xml
+		XMLFile2.xml = XMLFile2.xml
+		XMLFile3.xml = XMLFile3.xml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TMSAccountPurgeWS", "TMSAccountPurgeWS\TMSAccountPurgeWS.csproj", "{FD1A178D-143D-4A13-8574-E7C5595A1877}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{190FCADC-D3A1-4A45-9B8F-90DDF22D37BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{190FCADC-D3A1-4A45-9B8F-90DDF22D37BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{190FCADC-D3A1-4A45-9B8F-90DDF22D37BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{190FCADC-D3A1-4A45-9B8F-90DDF22D37BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C3BB37B-F61E-4C85-A2AB-A5544331038A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C3BB37B-F61E-4C85-A2AB-A5544331038A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C3BB37B-F61E-4C85-A2AB-A5544331038A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C3BB37B-F61E-4C85-A2AB-A5544331038A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49F9BD8A-1434-4BD0-8342-F252D1DCBFD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49F9BD8A-1434-4BD0-8342-F252D1DCBFD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49F9BD8A-1434-4BD0-8342-F252D1DCBFD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49F9BD8A-1434-4BD0-8342-F252D1DCBFD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{459C6E60-E698-4A98-9B73-F7155718842E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{459C6E60-E698-4A98-9B73-F7155718842E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{459C6E60-E698-4A98-9B73-F7155718842E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{459C6E60-E698-4A98-9B73-F7155718842E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD1A178D-143D-4A13-8574-E7C5595A1877}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD1A178D-143D-4A13-8574-E7C5595A1877}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD1A178D-143D-4A13-8574-E7C5595A1877}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD1A178D-143D-4A13-8574-E7C5595A1877}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
